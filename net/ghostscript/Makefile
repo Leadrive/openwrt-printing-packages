@@ -56,9 +56,9 @@ define Build/Compile
 	# PS. doing all in sed would be painful because the commands would need too much escaping.
 	$(SED) 's,OPENWRT_BASE_BUILD_PATH,$(HOST_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
 	$(SED) 's,OPENWRT_PGK_BUILD_PATH,$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
-	$(call Build/Compile/Default, cross_prepare)
 	$(call Build/Compile/Default)
 endef
+#	$(call Build/Compile/Default, cross_prepare)
 
 # Host build should also use system's zlib
 define Host/Configure
