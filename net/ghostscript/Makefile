@@ -57,13 +57,13 @@ define Build/Compile
 	# $(SED) 's,OPENWRT_BASE_BUILD_PATH,$(HOST_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
 	# $(SED) 's,OPENWRT_PGK_BUILD_PATH,$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
 	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/genarch /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux
-	$(CP) ../ghostscript-9.20-x86/obj/aux/genarch ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
+	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/genarch /home/develop/lede/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
 	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/genconf /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux
-	$(CP) ../ghostscript-9.20-x86/obj/aux/genconf ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
+	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/genconf /home/develop/lede/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
 	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/echogs /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux
-	$(CP) ../ghostscript-9.20-x86/obj/aux/echogs ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
+	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/echogs /home/develop/lede/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
 	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/mkromfs /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux
-	$(CP) ../ghostscript-9.20-x86/obj/aux/mkromfs ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
+	$(CP) /home/develop/ghostscript-9.20-x86/obj/aux/mkromfs /home/develop/lede/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/ghostscript-9.20/obj/aux
 	$(call Build/Compile/Default)
 endef
 #	$(call Build/Compile/Default, cross_prepare)
