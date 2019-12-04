@@ -54,8 +54,12 @@ endef
 define Build/Compile
 	# base/unix-aux.mak is patched, and now we replace these fixed strings by the actual paths.
 	# PS. doing all in sed would be painful because the commands would need too much escaping.
-	$(SED) 's,OPENWRT_BASE_BUILD_PATH,$(HOST_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
-	$(SED) 's,OPENWRT_PGK_BUILD_PATH,$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
+	# $(SED) 's,OPENWRT_BASE_BUILD_PATH,$(HOST_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
+	# $(SED) 's,OPENWRT_PGK_BUILD_PATH,$(PKG_BUILD_DIR),g' $(PKG_BUILD_DIR)/base/unix-aux.mak
+	(cp /home/develop/ghostscript-9.20-x86/obj/aux/genarch /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux)
+	(cp /home/develop/ghostscript-9.20-x86/obj/aux/genconf /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux)
+	(cp /home/develop/ghostscript-9.20-x86/obj/aux/echogs /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux)
+	(cp /home/develop/ghostscript-9.20-x86/obj/aux/mkromfs /home/develop/lede/build_dir/hostpkg/ghostscript-9.20/obj/aux)
 	$(call Build/Compile/Default)
 endef
 #	$(call Build/Compile/Default, cross_prepare)
