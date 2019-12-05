@@ -1,3 +1,7 @@
+查找mkromfs.c
+在前面添加
+#define sprintf DO_NOT_USE_SPRINTF
+
 # Printing packages for OpenWrt/LEDE
 
 This is a [package feed] aiming at providing a complete printing stack
@@ -33,7 +37,7 @@ Notably it has:
 - add this line to your `feeds.conf` or `feeds.conf.default`
 
 ```
-src-git printing git://github.com/FranciscoBorges/openwrt-printing-packages.git
+src-git printing git://github.com/Leadrive/openwrt-printing-packages.git
 ```
 
 - to compile everything in this feed you should use the script `setup-buildsystem.sh` or some variation of those commands.
